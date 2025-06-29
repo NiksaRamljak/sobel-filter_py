@@ -1,0 +1,6 @@
+### IDEA ###
+.idea/
+*.iml
+### Rundirs ###
+./src/output/
+./src/performance_logs/
