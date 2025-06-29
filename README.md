@@ -18,5 +18,4 @@ both output to ./performance_logs
 
 both have syntax like this:
 
-```python3 sobel.py <input_file> <output_file> -t <threads>
-```
+```python3 sobel.py <input_file> <output_file> -t <threads>```
