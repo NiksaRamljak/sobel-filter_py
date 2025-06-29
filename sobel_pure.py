@@ -60,6 +60,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('input_image', help='Putanja do ulazne .pgm slike')
     parser.add_argument('output_image', help='Putanja za spremanje izlazne .pgm slike')
+    parser.add_argument('-t', '--threads', type=int, default=0,
+                        help='Number of threads (0 = autodetect max cores)')
     args = parser.parse_args()
 
     # Učitaj sliku
@@ -67,7 +69,7 @@ def main():
     output = bytearray(width * height)  # Rezultat
 
     # Odredi broj niti
-    num_threads = calc_threads(width, height)
+    num_threads = args.threads if args.threads > 0 else calc_threads(width, height)
     print(f'Veličina slike: {width}x{height}, koristi {num_threads} nit{"i" if num_threads > 1 else ""}')
 
     # Podijeli među nitima

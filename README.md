@@ -15,3 +15,8 @@ tested only on linux
 **performance_noext.sh** tests the performance of sobel_pure.py
 
 both output to ./performance_logs
+
+both have syntax like this:
+
+```python3 sobel.py <input_file> <output_file> -t <threads>
+```
