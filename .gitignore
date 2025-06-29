@@ -2,5 +2,5 @@
 .idea/
 *.iml
 ### Rundirs ###
-./src/output/
-./src/performance_logs/
+output/
+performance_logs/
